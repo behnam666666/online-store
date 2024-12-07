@@ -1,12 +1,12 @@
 {
   "homepage": "https://behnam666666.github.io/online-store",
-  "name": "rastavashop",
+  "name": "online-store",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "vite build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
