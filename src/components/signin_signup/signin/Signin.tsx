@@ -9,7 +9,7 @@ const Signin = () =>{
   const handleNavigate = () => {
     setZoomIn(false); 
     setTimeout(() => {
-      navigate("/Signup");    
+      navigate("/online-store/Signup");    
     }, 500); 
   };
     return(

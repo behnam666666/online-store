@@ -19,12 +19,13 @@ function App() {
     <MainLayout>
 <Box sx={{bgcolor:"black.main" , overflow:"hidden" }}>
     <Routes>
-      <Route path="/" element={<Navigate to="/Signup" />} />
-      <Route path="/Signup" element={<Signup />} />
-      <Route path="/Signin" element={<Signin  />} />
-      <Route path="/" element={<><Headnav Color="white.main"></Headnav><Outlet></Outlet></>} >
-        <Route path="/home" element={<><Home  /></>} ></Route>
-        <Route path="/cart" element={<Pagecart></Pagecart>} />
+      <Route path="/online-store" element={<Navigate to="/home" />} />
+      <Route path="/online-store/Signup" element={<><Signup /><Navigate to="/online-store/Signup" /></>} />
+      <Route path="/online-store/Signin" element={<><Signin  /><Navigate to="/online-store/Signin" /></>} />
+
+      <Route path="/online-store" element={<><Headnav Color="white.main"></Headnav><Outlet></Outlet></>} >
+        <Route path="home" element={<><Home  /></>} ></Route>
+        <Route path="cart" element={<Pagecart></Pagecart>} />
         <Route path="SingleProduct/:productid" element={<SingleProdut></SingleProdut>} />
 
       </Route>

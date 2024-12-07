@@ -34,7 +34,7 @@ import { SigninData} from "../../../data/SigninSignupData";
                 } else {
                   console.log("No User ID found in cookies.");
                 }
-                navigate("/home")
+                navigate("/online-store/home")
             }
             else(
                 toast.error("sing in error")

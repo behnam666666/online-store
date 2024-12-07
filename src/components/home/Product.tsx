@@ -7,7 +7,7 @@ const Product =({ product }: { product: IProduct })=>{
     const navigate = useNavigate()
     return(
         <>
-        <Box component="div" width={"330px"}  key={product.id} onClick={()=>{navigate(`/SingleProduct/${product.id}`)}} sx={{cursor:"pointer"}} >
+        <Box component="div" width={"330px"}  key={product.id} onClick={()=>{navigate(`/online-store/SingleProduct/${product.id}`)}} sx={{cursor:"pointer"}} >
                                 <Box sx={{display:"flex", justifyContent:"center" , alignItems:"center", width:"100%",  height:"400px", border:"2px solid", borderColor:"white.main" , borderRadius:"12px"}}>
                                     <Box sx={{display:"flex", justifyContent:"center" , alignItems:"center", width:"100%",  height:"400px", border:"1px solid", borderColor:"white.main" , borderRadius:"12px", bgcolor:"#fff"}}>
                                         <Box component="img" src={product.image} sx={{maxWidth:"90%" , maxHeight:"380px" ,cursor:"pointer" , borderRadius:"12px"}}  />

@@ -18,7 +18,7 @@ const Headnav =({Color} : {Color : string})=>{
     const navigate = useNavigate()
     const [user , setuser] = useState <IUser> ();
 
-    if(productid.pathname=="/home"){
+    if(productid.pathname=="/online-store/home"){
         Color="#fff"
     }
     
@@ -63,15 +63,15 @@ const Headnav =({Color} : {Color : string})=>{
         <>
         <Box sx={{width:"100%",position:"absolute",top:"0px" , display:"flex" , justifyContent:"space-between", alignItems:"center"  , zIndex:"3" }}>
                 <Box sx={{margin:"20px"}}>
-                    <Typography component="div" sx={{fontSize:"36px" , fontWeight:"700", color:Color  , cursor:"pointer"}} onClick={()=>{navigate("/home")}}>Mowj</Typography>
+                    <Typography component="div" sx={{fontSize:"36px" , fontWeight:"700", color:Color  , cursor:"pointer"}} onClick={()=>{navigate("/online-store/home")}}>Mowj</Typography>
                 </Box>
                 <Box sx={{display:{xs:"none" , sm:"flex"} , margin:"20px" , }} >
                     <Box sx={{display:"flex", cursor:"pointer"}}>
                             <SearchOutlined sx={{width:"30px" , height:"30px" , color:Color, mx:"8px"}}></SearchOutlined>
                             <Typography sx={{fontSize:"22px", fontWeight:"500", color:Color}}>Search</Typography>
                     </Box>
-                    {user? <Box  component="div" onClick={()=>{navigate("/cart")}}  sx={{display:"flex" , mx:"24px", cursor:"pointer" , position:"relative"}}>  <ShoppingBagOutlined sx={{width:"30px" , height:"30px" , color:Color, mx:"8px"}}></ShoppingBagOutlined><Typography sx={{fontSize:"22px", fontWeight:"500", color:Color}}>Cart{usercartdata?`(${usercartdata.length})`:""}</Typography></Box>: <Box sx={{ mx:"24px"}}></Box> }
-                    {user? <Box component="div" onClick={()=>{navigate("/Signin")}} sx={{display:"flex" , cursor:"pointer"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:Color, mx:"8px"}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:Color}}>{user.username}</Typography> </Box>:<Box component="div" onClick={()=>{navigate("/Signin")}} sx={{display:"flex" , cursor:"pointer"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:Color, mx:"8px"}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:Color}}>Login</Typography> </Box>}
+                    {user? <Box  component="div" onClick={()=>{navigate("/online-store/cart")}}  sx={{display:"flex" , mx:"24px", cursor:"pointer" , position:"relative"}}>  <ShoppingBagOutlined sx={{width:"30px" , height:"30px" , color:Color, mx:"8px"}}></ShoppingBagOutlined><Typography sx={{fontSize:"22px", fontWeight:"500", color:Color}}>Cart{usercartdata?`(${usercartdata.length})`:""}</Typography></Box>: <Box sx={{ mx:"24px"}}></Box> }
+                    {user? <Box component="div" onClick={()=>{navigate("/online-store/Signin")}} sx={{display:"flex" , cursor:"pointer"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:Color, mx:"8px"}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:Color}}>{user.username}</Typography> </Box>:<Box component="div" onClick={()=>{navigate("/online-store/Signin")}} sx={{display:"flex" , cursor:"pointer"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:Color, mx:"8px"}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:Color}}>Login</Typography> </Box>}
                 </Box>
 
 
@@ -84,8 +84,8 @@ const Headnav =({Color} : {Color : string})=>{
                                 <SearchOutlined sx={{width:"30px" , height:"30px" , color:"white.main",}}></SearchOutlined>
                                 <Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main"}}>Search</Typography>
                         </Box>
-                        {user? <Box  component="div" onClick={()=>{navigate("/cart")}}  sx={{my:"10px" , backgroundColor:"black.main", padding:"8px", borderRadius:"16px" ,  display:"flex", cursor:"pointer" , position:"relative" , justifyContent:"center" , alignItems:"center"}}>  <ShoppingBagOutlined sx={{width:"30px" , height:"30px" , color:"white.main",}}></ShoppingBagOutlined><Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main"}}>Cart{usercartdata?`(${usercartdata.length})`:""}</Typography></Box>: <Box sx={{ mx:"24px"}}></Box> }
-                        {user? <Box component="div" onClick={()=>{navigate("/home")}} sx={{backgroundColor:"black.main", padding:"8px", borderRadius:"16px" , display:"flex" , cursor:"pointer" , justifyContent:"center" , alignItems:"center"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:"white.main",}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main" , maxWidth:"120px", overflow:"hidden", textOverflow:"ellipsis"}}>{user.username}</Typography> </Box>:<Box component="div" onClick={()=>{navigate("/Signin")}} sx={{backgroundColor:"black.main",padding:"8px",marginTop:"10px" , borderRadius:"16px" , display:"flex" , cursor:"pointer" , justifyContent:"center" , alignItems:"center"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:"white.main"}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main"}}>Login</Typography> </Box>}
+                        {user? <Box  component="div" onClick={()=>{navigate("/online-store/cart")}}  sx={{my:"10px" , backgroundColor:"black.main", padding:"8px", borderRadius:"16px" ,  display:"flex", cursor:"pointer" , position:"relative" , justifyContent:"center" , alignItems:"center"}}>  <ShoppingBagOutlined sx={{width:"30px" , height:"30px" , color:"white.main",}}></ShoppingBagOutlined><Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main"}}>Cart{usercartdata?`(${usercartdata.length})`:""}</Typography></Box>: <Box sx={{ mx:"24px"}}></Box> }
+                        {user? <Box component="div" onClick={()=>{navigate("/online-store/home")}} sx={{backgroundColor:"black.main", padding:"8px", borderRadius:"16px" , display:"flex" , cursor:"pointer" , justifyContent:"center" , alignItems:"center"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:"white.main",}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main" , maxWidth:"120px", overflow:"hidden", textOverflow:"ellipsis"}}>{user.username}</Typography> </Box>:<Box component="div" onClick={()=>{navigate("/online-store/Signin")}} sx={{backgroundColor:"black.main",padding:"8px",marginTop:"10px" , borderRadius:"16px" , display:"flex" , cursor:"pointer" , justifyContent:"center" , alignItems:"center"}} > <AccountCircleOutlined sx={{width:"30px" , height:"30px" , color:"white.main"}}></AccountCircleOutlined> <Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main"}}>Login</Typography> </Box>}
                     </Box>
                 </Box>
             </Box>
