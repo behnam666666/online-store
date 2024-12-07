@@ -75,11 +75,11 @@ const Headnav =({Color} : {Color : string})=>{
                 </Box>
 
 
-                <Box component="div" sx={{display:showmenu?"block":"none" , width:"100%", height:"100vh" , position:"fixed", backgroundColor:"#000",opacity:"0.6", zIndex:"-1" , top:"0"}} onClick={()=>{setshowmenu(!showmenu)}}>
+                <Box component="div" sx={{display:showmenu?"block":"none" , width:"100%", height:"200vh" , position:"fixed", backgroundColor:"#000",opacity:"0.6", zIndex:"-1" , top:"0"}} onClick={()=>{setshowmenu(!showmenu)}}>
                 </Box>
                 <Box component="div" sx={{zIndex:"2" ,display:{xs:"flex" , sm:"none"} , position:"fixed" , right:showmenu?"135px":"-52px" ,top:"0" , transition:".3s" }} onClick={()=>{setshowmenu(!showmenu)}}>
                     <Menu sx={{fontSize:"40px" ,  cursor:"pointer",color:"black.main" , backgroundColor:"white.main" , borderRadius:"8px" , padding:"4px 10px 4px 4px" , position:"relative" , right:"44px" , top:"25px"}}></Menu>
-                    <Box sx={{height:"100vh",borderLeft:"2px solid" , borderColor:"black.main", width:"150px" ,display:{xs:"flex" , sm:"none"} , flexDirection:"column", position:"absolute" , top:"0px" ,right:"-140px", backgroundColor:"white.main" , padding:"20px"}} >
+                    <Box sx={{height:"200vh",borderLeft:"2px solid" , borderColor:"black.main", width:"150px" ,display:{xs:"flex" , sm:"none"} , flexDirection:"column", position:"absolute" , top:"0px" ,right:"-140px", backgroundColor:"white.main" , padding:"20px"}} >
                         <Box sx={{display:"flex", cursor:"pointer" , backgroundColor:"black.main" , borderRadius:"16px" , padding:"8px" , alignItems:"center" , justifyContent:"center"}}>
                                 <SearchOutlined sx={{width:"30px" , height:"30px" , color:"white.main",}}></SearchOutlined>
                                 <Typography sx={{fontSize:"22px", fontWeight:"500", color:"white.main"}}>Search</Typography>

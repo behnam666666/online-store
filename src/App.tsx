@@ -19,7 +19,7 @@ function App() {
     <MainLayout>
 <Box sx={{bgcolor:"black.main" , overflow:"hidden" }}>
     <Routes>
-      <Route path="/online-store" element={<Navigate to="home" />} />
+      <Route path="/online-store" element={<Navigate to="/online-store/home" />} />
       <Route path="/online-store/Signup" element={<><Signup /><Navigate to="/online-store/Signup" /></>} />
       <Route path="/online-store/Signin" element={<><Signin  /><Navigate to="/online-store/Signin" /></>} />
 
